@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+
+
+function bonbon::getFirstChild() {
+	cat $1 | awk -F ":" '{ print $1 }' | tr -d '"' | uniq
+}
+
+bonbon::getFirstChild default.bonbon
